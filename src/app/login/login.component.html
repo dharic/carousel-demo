@@ -1,0 +1,13 @@
+<div class="login-page">
+    <div class="login-box">
+        <div>LOGIN</div>
+        <div class="username-password">
+            <input placeholder="Enter Username" type="text" [(ngModel)]="userName">
+            <input placeholder="Enter Passsword" type="password" [(ngModel)]="passWord">
+            <div class="buttons">
+                <button (click)="clearInput()">CLEAR</button>
+                <button (click)="logIn()">LOGIN</button>
+            </div>
+        </div>
+    </div>
+</div>

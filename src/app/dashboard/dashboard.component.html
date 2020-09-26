@@ -1,0 +1,46 @@
+<div class="header">
+    DASHBOARD
+    <div class="username">{{username}}</div>
+</div>
+
+
+
+<h3>SAMPLE CAROUSEL</h3>
+<br>
+<div class="slide-div">
+    <button class="slide-btn" (click)="slidePrevious()"><img src="assets/left-arrow.svg"></button>
+    <div class="list">
+        <ng-container *ngFor="let item of slides;let i=index">
+
+            <div (click)="onClickCard(i)" class="card" [class.selected-card]="selected==i" [class.previous-card]="previous==i" [class.next-card]="next==i">
+                <div class="img">
+                    <img src="assets/img_avatar.png">
+                </div>
+                <div class="content">
+                    <div class="label">
+                        <div>Name</div>
+                        <div class="names">{{item}}</div>
+                    </div>
+                    <div class="label">
+                        <div>Date of birth</div>
+                        <div class="names">20-12-2020</div>
+                    </div>
+                    <div class="label">
+                        <div>Designation</div>
+                        <div class="names">UI/UX Designer{{item}}
+                        </div>
+                    </div>
+                    <div class="button">
+                        <button>MORE</button>
+                    </div>
+                </div>
+            </div>
+
+        </ng-container>
+    </div>
+    <button class="slide-btn" (click)="slideNext()"><img src="assets/next.svg"></button>
+</div>
+
+<div class="logout-btn">
+    <button (click)="logOut()">LOGOUT</button>
+</div>
